@@ -1,0 +1,169 @@
+ @keyframes fadeIn {
+   from {
+     opacity: 0;
+   }
+
+   to {
+     opacity: 1;
+   }
+ }
+
+ @keyframes fadeInUp {
+   from {
+     opacity: 0;
+     transform: translateY(20px);
+   }
+
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+
+ .animate-fade-in {
+   animation: fadeIn 0.8s ease-out forwards;
+   opacity: 0;
+ }
+
+ .animate-fade-in-up {
+   animation: fadeInUp 0.8s ease-out forwards;
+   opacity: 0;
+ }
+
+ @keyframes marquee {
+   0% {
+     transform: translateX(0%);
+   }
+
+   100% {
+     transform: translateX(-100%);
+   }
+ }
+
+ .animate-marquee {
+   animation: marquee 40s linear infinite;
+ }
+
+ .pause-marquee:hover {
+   animation-play-state: paused;
+ }
+
+ /* Fallback pour les navigateurs qui ne supportent pas hover:pause-marquee */
+ .animate-marquee:hover {
+   animation-play-state: paused;
+ }
+
+
+ /* Animations personnalisées */
+ @keyframes fadeInUp {
+   from {
+     opacity: 0;
+     transform: translateY(30px);
+   }
+
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+
+ @keyframes fadeInDown {
+   from {
+     opacity: 0;
+     transform: translateY(-30px);
+   }
+
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+
+ .animate-fade-in-up {
+   animation: fadeInUp 0.8s ease-out forwards;
+ }
+
+ .animate-fade-in-down {
+   animation: fadeInDown 0.8s ease-out forwards;
+ }
+
+ /* Classe pour le fond orange très clair des icônes */
+ .bg-orange-50 {
+   background-color: #fff7ed;
+ }
+
+ /* Animation de flottement */
+ @keyframes float {
+   0% {
+     transform: translateY(30px);
+     opacity: 0;
+   }
+
+   100% {
+     transform: translateY(0);
+     opacity: 1;
+   }
+ }
+
+ .animate-float {
+   animation: float 0.8s ease-out forwards;
+   opacity: 0;
+ }
+
+ /* Animation au survol */
+ .hover-float:hover {
+   animation: hover-float 3s ease-in-out infinite;
+ }
+
+ @keyframes hover-float {
+
+   0%,
+   100% {
+     transform: translateY(0);
+   }
+
+   50% {
+     transform: translateY(-10px);
+   }
+ }
+
+ /* Animation pour le marquee */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+  
+  .hover\:pause-marquee:hover {
+    animation-play-state: paused;
+  }
+  
+  /* Animations pour le hero */
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fade-in-down {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade-in { animation: fade-in 0.5s ease-out forwards; }
+  .animate-fade-in-up { animation: fade-in-up 0.5s ease-out forwards; }
+  .animate-fade-in-down { animation: fade-in-down 0.5s ease-out forwards; }
+
+  /* Ajustements spécifiques pour mobile */
+        @media (max-width: 640px) {
+            .animate-marquee {
+                animation-duration: 20s; /* Plus rapide en mobile */
+            }
+        }
